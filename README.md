@@ -53,6 +53,10 @@ sudo apt-get install libcurl4 curl -y
 Isso garante que o Xtream Codes funcione corretamente sem problemas de compatibilidade com libcurl.
 
 
+Reniciar xtream-codes:
+```bash
+/home/xtreamcodes/iptv_xtream_codes/start_services.sh
+```
 ## ⚠️ **Dicas Importantes**  
 
 ✅ **Execute sempre os comandos como root** para evitar problemas de permissão.  
