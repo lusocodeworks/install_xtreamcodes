@@ -1,7 +1,3 @@
-Aqui está um README aprimorado para a instalação do **Xtream Codes** no Ubuntu 18, tornando-o mais profissional, organizado e fácil de entender:
-
----
-
 # 📡 Instalação do Xtream Codes – Main Server e Load Balancer  
 
 Este guia explica como instalar o **Xtream Codes** em servidores **Main** e **Load Balancer** rodando **Ubuntu 18**.
