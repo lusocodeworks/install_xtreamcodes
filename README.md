@@ -1,10 +1,10 @@
 # 📡 Instalação do Xtream Codes – Main Server e Load Balancer  
 
-Este guia explica como instalar o **Xtream Codes** em servidores **Main** e **Load Balancer** rodando **Ubuntu 18**.
+Este guia explica como instalar o **Xtream Codes** em servidores **Main** e **Load Balancer** com **Ubuntu 18**.
 
 ## 📌 **Pré-requisitos**  
 
-Antes de iniciar a instalação, certifique-se de que está utilizando um servidor limpo com **Ubuntu 18** e execute os seguintes comandos como **root**:
+Antes de iniciar a instalação, certifique-se de que está a utilizar um servidor limpo com **Ubuntu 18** e execute os seguintes comandos como **root**:
 
 ```bash
 apt-get update && apt-get install libxslt1-dev libcurl3 libgeoip-dev python -y
@@ -12,7 +12,7 @@ apt-get update && apt-get install libxslt1-dev libcurl3 libgeoip-dev python -y
 
 ## 🚀 **Instalação Automática**  
 
-Para instalar o **Xtream Codes**, basta rodar o seguinte comando:
+Para instalar  **Xtream Codes**, basta rodar o seguinte comando:
 
 ```bash
 wget https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/install.py && sudo python install.py
@@ -22,7 +22,7 @@ Isso baixará e executará o script de instalação automaticamente.
 
 ---
 
-## 🌍 **Correção do GeoLite2.mmdb (Problema de Transmissão Não Executada)**  
+## 🌍 **Correção do GeoLite2.mmdb (Problema canais nao inicião)**  
 
 O arquivo **GeoLite2.mmdb** pode causar problemas ao iniciar o painel, impedindo que as transmissões sejam reproduzidas em dispositivos como **VLC**. Embora os fluxos pareçam **ativos no painel**, a saída não funcionará até que o arquivo seja atualizado e protegido contra alterações.
 
@@ -43,7 +43,7 @@ sudo chattr +i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb
 
 ## ⚠️ **Dicas Importantes**  
 
-✅ **Execute sempre os comandos como usuário root** para evitar problemas de permissão.  
+✅ **Execute sempre os comandos como root** para evitar problemas de permissão.  
 ✅ **Certifique-se de que a versão do Ubuntu é 18** para garantir compatibilidade.  
 ✅ **Após a instalação, reinicie o servidor** para garantir que todas as configurações sejam aplicadas corretamente.
 
