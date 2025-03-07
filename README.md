@@ -45,13 +45,12 @@ Erro libcurl4-openssl
 🔄 Instalando libcurl3 e libcurl4 Juntos
 Para evitar conflitos entre versões do libcurl, use o repositório PPA xapienz/curl34, que permite a instalação de ambas as versões:
 
-bash
-Copiar
-Editar
+```bash
 sudo add-apt-repository ppa:xapienz/curl34 -y
 sudo apt-get update
 sudo apt-get install libcurl4 curl -y
-Isso garantirá que o Xtream Codes funcione corretamente sem problemas de compatibilidade com libcurl.
+```
+Isso garante que o Xtream Codes funcione corretamente sem problemas de compatibilidade com libcurl.
 
 
 ## ⚠️ **Dicas Importantes**  
