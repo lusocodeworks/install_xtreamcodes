@@ -22,7 +22,7 @@ Isso baixará e executará o script de instalação automaticamente.
 
 ---
 
-## 🌍 **Correção do GeoLite2.mmdb (Problema canais nao inicião)**  
+## 🌍 **Correção do GeoLite2.mmdb (Problema canais nao iniciam)**  
 
 O arquivo **GeoLite2.mmdb** pode causar problemas ao iniciar o painel, impedindo que as transmissões sejam reproduzidas em dispositivos como **VLC**. Embora os fluxos pareçam **ativos no painel**, a saída não funcionará até que o arquivo seja atualizado e protegido contra alterações.
 
