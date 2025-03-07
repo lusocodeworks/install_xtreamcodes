@@ -40,6 +40,19 @@ sudo chattr +i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb
 - **`chattr +i`** → Bloqueia o arquivo novamente para evitar remoções futuras.  
 
 ---
+Erro libcurl4-openssl
+
+🔄 Instalando libcurl3 e libcurl4 Juntos
+Para evitar conflitos entre versões do libcurl, use o repositório PPA xapienz/curl34, que permite a instalação de ambas as versões:
+
+bash
+Copiar
+Editar
+sudo add-apt-repository ppa:xapienz/curl34 -y
+sudo apt-get update
+sudo apt-get install libcurl4 curl -y
+Isso garantirá que o Xtream Codes funcione corretamente sem problemas de compatibilidade com libcurl.
+
 
 ## ⚠️ **Dicas Importantes**  
 
