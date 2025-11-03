@@ -3,7 +3,7 @@
 import subprocess, os, sys, socket
 from itertools import cycle, izip
 
-rDownloadURL = "https://install.gpanel.space/sub_xtreamcodes_reborn.tar.gz"
+rDownloadURL = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/sub_xtreamcodes_reborn.tar.gz"
 rPackages = ["libcurl3", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc"]
 
 def getVersion():
@@ -18,7 +18,7 @@ def prepare():
     os.system("apt-get update > /dev/null")
     os.system("apt-get remove --auto-remove libcurl4 -y > /dev/null")
     for rPackage in rPackages: os.system("apt-get install %s -y > /dev/null" % rPackage)
-    os.system("wget -q -O /tmp/libpng12.deb https://install.gpanel.space/libpng12-0_1.2.54-1ubuntu1_amd64.deb")
+    os.system("wget -q -O /tmp/libpng12.deb https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/libpng12-0_1.2.54-1ubuntu1_amd64.deb")
     os.system("dpkg -i /tmp/libpng12.deb > /dev/null")
     os.system("apt-get install -y > /dev/null") # Clean up above
     try: os.remove("/tmp/libpng12.deb")
@@ -46,9 +46,9 @@ def encrypt(rHost="127.0.0.1", rUsername="user_iptvpro", rPassword="", rDatabase
     rf.close()
 
 def configure():
-    rYou = "https://install.gpanel.space/youtube-dl" 
-    rCheckGeo = "https://install.gpanel.space/check_geolite.sh"
-    rCertbot_info = "https://install.gpanel.space//certbot/certbot_info.txt"
+    rYou = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/youtube-dl" 
+    rCheckGeo = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/check_geolite.sh"
+    rCertbot_info = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/certbot/certbot_info.txt"
     if not "/home/xtreamcodes/iptv_xtream_codes/" in open("/etc/fstab").read():
         rFile = open("/etc/fstab", "a")
         rFile.write("tmpfs /home/xtreamcodes/iptv_xtream_codes/streams tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777,size=90% 0 0\ntmpfs /home/xtreamcodes/iptv_xtream_codes/tmp tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777,size=2G 0 0")
@@ -68,9 +68,9 @@ def configure():
     os.system("ln -s /home/xtreamcodes/iptv_xtream_codes/bin/ffmpeg /usr/bin/")
     os.system("chattr -i /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
     os.system("rm /home/xtreamcodes/iptv_xtream_codes/GeoLite2.mmdb")
-    os.system("wget -q https://install.gpanel.space/Geolite/GeoLite2.mmdb -O /home/xtreamcodes/iptv_xtream_codes/Gpanel/GeoLite2.mmdb")
-    os.system("wget -q https://install.gpanel.space/pid_monitor.php -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
-    os.system("wget -q https://install.gpanel.space/config.py -O /home/xtreamcodes/iptv_xtream_codes/config.py")
+    os.system("wget -q https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/GeoLite2.mmdb -O /home/xtreamcodes/iptv_xtream_codes/Gpanel/GeoLite2.mmdb")
+    os.system("wget -q https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/pid_monitor.php -O /home/xtreamcodes/iptv_xtream_codes/crons/pid_monitor.php")
+    os.system("wget -q https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/config.py -O /home/xtreamcodes/iptv_xtream_codes/config.py")
     os.system("rm /usr/local/bin/youtube-dl 2>/dev/null")
     os.system('wget -q -O "/usr/local/bin/youtube-dl" "%s"' % rYou)
     os.system("sudo chmod a+rx /usr/local/bin/youtube-dl")
