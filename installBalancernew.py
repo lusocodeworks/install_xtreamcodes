@@ -3,7 +3,7 @@
 import subprocess, os, random, string, sys, shutil, socket, zipfile, urllib2, json
 from itertools import cycle, izip
 
-rDownloadURL = "https://install.gpanel.space/sub_xtreamcodes_reborn_20.tar.gz"
+rDownloadURL = "https://github.com/lusocodeworks/install_xtreamcodes/releases/download/ubuntu20/sub_xtreamcodes_reborn_20.tar.gz"
 rPackages = ["libcurl4", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc", "libpng16-16", "libzip5", "python-is-python2", "libonig-dev"]
 
 def getVersion():
