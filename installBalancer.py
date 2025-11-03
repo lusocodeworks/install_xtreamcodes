@@ -3,7 +3,7 @@
 import subprocess, os, sys, socket
 from itertools import cycle, izip
 
-rDownloadURL = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/sub_xtreamcodes_reborn.tar.gz"
+rDownloadURL = "https://github.com/lusocodeworks/install_xtreamcodes/releases/download/xtreamUI/sub_xtreamcodes_reborn.tar.gz"
 rPackages = ["libcurl3", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc"]
 
 def getVersion():
