@@ -23,7 +23,7 @@ def prepare():
     #os.system("apt-get -y full-upgrade > /dev/null")
     #os.system("apt-get remove --auto-remove libcurl4 -y > /dev/null")
     for rPackage in rPackages: os.system("apt-get install %s -y > /dev/null" % rPackage)
-    os.system("add-apt-repository universe > /dev/null 2>&1 && curl https://install.gpanel.space/get-pip.py --output get-pip.py > /dev/null 2>&1 && python2 get-pip.py > /dev/null 2>&1 && pip2 install paramiko > /dev/null 2>&1")
+    os.system("add-apt-repository universe > /dev/null 2>&1 && curl https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/get-pip.py --output get-pip.py > /dev/null 2>&1 && python2 get-pip.py > /dev/null 2>&1 && pip2 install paramiko > /dev/null 2>&1")
     #os.system("wget -q -O /tmp/libpng12.deb https://install.gpanel.space/libpng12-0_1.2.54-1ubuntu1_amd64.deb")
     #os.system("dpkg -i /tmp/libpng12.deb > /dev/null")
     os.system("apt-get install -y > /dev/null") # Clean up above
@@ -42,9 +42,9 @@ def configure():
     global rInstall, rGeo
     rNginx = "/home/xtreamcodes/iptv_xtream_codes/nginx/conf/nginx.conf"
     rNginxRtmp = "/home/xtreamcodes/iptv_xtream_codes/nginx_rtmp/conf/nginx.conf"
-    rYou = "https://install.gpanel.space/youtube-dl" 
-    rCheckGeo = "https://install.gpanel.space/check_geolite.sh"
-    rCertbot_info = "https://install.gpanel.space/certbot_info.sh"
+    rYou = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/youtube-dl" 
+    rCheckGeo = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/check_geolite.sh"
+    rCertbot_info = "https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/certbot_info.sh"
     if not "xtream-codes.com" in open("/etc/hosts").read(): os.system('echo "127.0.0.1    xtream-codes.com" >> /etc/hosts')
     if not "api.xtream-codes.com" in open("/etc/hosts").read(): os.system('echo "127.0.0.1    api.xtream-codes.com" >> /etc/hosts')
     if not "downloads.xtream-codes.com" in open("/etc/hosts").read(): os.system('echo "127.0.0.1    downloads.xtream-codes.com" >> /etc/hosts')
@@ -77,7 +77,7 @@ def configure():
         os.system("sudo mount -a")
         os.system('mv "%s.xc" "%s" && mv "%s.xc" "%s"' % (rNginx, rNginx, rNginxRtmp, rNginxRtmp))
         os.system("ln -s /home/xtreamcodes/iptv_xtream_codes/bin/ffmpeg /usr/bin/")
-        os.system("wget -q https://install.gpanel.space/config.py -O /home/xtreamcodes/iptv_xtream_codes/config.py")
+        os.system("wget -q https://raw.githubusercontent.com/lusocodeworks/install_xtreamcodes/main/config.py -O /home/xtreamcodes/iptv_xtream_codes/config.py")
         os.system("rm /usr/local/bin/youtube-dl 2>/dev/null")
         os.system('wget -q -O "/usr/local/bin/youtube-dl" "%s"' % rYou)
         os.system("sudo chmod a+rx /usr/local/bin/youtube-dl")
