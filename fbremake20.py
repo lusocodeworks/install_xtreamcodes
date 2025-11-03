@@ -3,7 +3,7 @@
 import subprocess, os, sys
 from itertools import cycle, izip
 
-rFbremake20 = "https://install.gpanel.space/sub_xtreamcodes_reborn_20.tar.gz"
+rFbremake20 = "https://github.com/lusocodeworks/install_xtreamcodes/releases/download/ubuntu20/sub_xtreamcodes_reborn_20.tar.gz"
 rPackages = ["libcurl4", "libxslt1-dev", "libgeoip-dev", "e2fsprogs", "wget", "mcrypt", "nscd", "htop", "zip", "unzip", "mc"]
 rGeo = "https://install.gpanel.space/Geolite/GeoLite2.mmdb"
 
